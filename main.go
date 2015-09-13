@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	my_service := service.GetServiceConfig()
+	my_service := service.New()
 	my_service.Handler = ExampleServe
 	my_service.Serve()
 }
