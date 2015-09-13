@@ -7,12 +7,8 @@ import (
 )
 
 func main() {
-	my_service := service.Service{
-		Title:   "example_service",
-		Version: "0.1",
-		Type:    "http",
-		Handler: ExampleServe,
-	}
+	my_service := service.GetServiceConfig()
+	my_service.Handler = ExampleServe
 	my_service.Serve()
 }
 
