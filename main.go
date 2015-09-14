@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	service.SetHandler(http.HandlerFunc(ExampleServe))
+	service.Handler(http.HandlerFunc(ExampleServe))
 	service.Serve()
 }
 
