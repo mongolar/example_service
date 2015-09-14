@@ -7,9 +7,8 @@ import (
 )
 
 func main() {
-	my_service := service.New()
-	my_service.Handler = http.HandlerFunc(ExampleServe)
-	my_service.Serve()
+	service.SetHandler(http.HandlerFunc(ExampleServe))
+	service.Serve()
 }
 
 func ExampleServe(w http.ResponseWriter, r *http.Request) {
