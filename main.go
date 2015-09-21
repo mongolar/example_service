@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/mongolar/service"
+	"github.com/mongolar/microservice/server"
 	"net/http"
 )
 
 func main() {
-	service.Handler(http.HandlerFunc(ExampleServe))
-	service.Serve()
+	server.Handler(http.HandlerFunc(ExampleServe))
+	server.Serve()
 }
 
 func ExampleServe(w http.ResponseWriter, r *http.Request) {
